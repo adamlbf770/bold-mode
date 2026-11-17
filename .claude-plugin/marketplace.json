@@ -9,7 +9,7 @@
       "name": "bold-mode",
       "source": "./",
       "description": "Let Claude try the bold idea without risking your code: isolated experiments, a hard step budget, and an honest scoreboard against your baseline.",
-      "version": "1.0.0"
+      "version": "1.1.0"
     }
   ]
 }

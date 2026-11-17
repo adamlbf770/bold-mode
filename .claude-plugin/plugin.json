@@ -1,6 +1,6 @@
 {
   "name": "bold-mode",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Let Claude try the bold idea without risking your code: isolated experiments, a hard step budget, and an honest scoreboard against your baseline.",
   "author": {
     "name": "bold-mode contributors"

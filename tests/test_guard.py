@@ -123,6 +123,24 @@ class GuardTest(unittest.TestCase):
         self.assertTrue(denied(result))
         self.assertIn("budget", result["hookSpecificOutput"]["permissionDecisionReason"])
 
+    def test_default_budget_is_25(self):
+        self.start()
+        for _ in range(25):
+            self.assertIsNone(self.bash("npm test"))
+        self.assertTrue(denied(self.bash("npm test")))
+
+    def test_bold_go_starts_fresh_run_after_checkpoint(self):
+        self.start()
+        run("Stop", self.base)  # checkpoint ends the turn
+        run("UserPromptSubmit", {**self.base, "prompt": "/bold go"})
+        self.assertTrue(denied(self.write(os.path.join(self.root, "a.py"))))
+
+    def test_isolation_snapshot_commands_allowed(self):
+        self.start()
+        self.assertIsNone(self.bash("git status --porcelain"))
+        self.assertIsNone(self.bash(
+            'base=$(git stash create); git worktree add ../app-bold-x -b bold/x ${base:-HEAD}'))
+
     def test_reads_are_free(self):
         self.start()
         env = {"BOLD_MODE_BUDGET": "1"}
