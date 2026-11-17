@@ -1,0 +1,15 @@
+{
+  "name": "bold-mode",
+  "description": "bold-mode: safe, measured bold experiments for Claude Code.",
+  "owner": {
+    "name": "bold-mode contributors"
+  },
+  "plugins": [
+    {
+      "name": "bold-mode",
+      "source": "./",
+      "description": "Let Claude try the bold idea without risking your code: isolated experiments, a hard step budget, and an honest scoreboard against your baseline.",
+      "version": "1.0.0"
+    }
+  ]
+}
