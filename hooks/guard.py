@@ -9,7 +9,7 @@ Design rule: this script must never break the user's session. Any internal
 error exits 0 silently (allow).
 
 Settings (environment variables):
-  BOLD_MODE_BUDGET   max counted steps per run (default 15)
+  BOLD_MODE_BUDGET   max counted steps per run (default 25)
   BOLD_MODE_GUARD    set to "off" to disable all blocking
 """
 import json
@@ -23,6 +23,7 @@ COUNTED_TOOLS = {"Bash", "Edit", "Write", "MultiEdit", "NotebookEdit"}
 WRITE_TOOLS = {"Edit", "Write", "MultiEdit", "NotebookEdit"}
 STALE_SECONDS = 6 * 60 * 60
 WARN_AT_REMAINING = 3
+DEFAULT_BUDGET = 25
 
 START_PROMPT = re.compile(r"^\s*/(bold-mode:)?bold(\s|$)|\bbold-mode\b", re.IGNORECASE)
 
@@ -88,9 +89,9 @@ def clear_state(session_id):
 
 def budget():
     try:
-        return max(1, int(os.environ.get("BOLD_MODE_BUDGET", "15")))
+        return max(1, int(os.environ.get("BOLD_MODE_BUDGET", str(DEFAULT_BUDGET))))
     except ValueError:
-        return 15
+        return DEFAULT_BUDGET
 
 
 def guard_enabled():

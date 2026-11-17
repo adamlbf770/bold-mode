@@ -27,9 +27,9 @@ bold-mode makes the bold attempt **cheap and safe**:
 - **`bold-mode` skill**: the method. Isolate, baseline, diverge into Safe / Bold / Wild, build, measure, report, hand over.
 - **11 lenses**: short reframing playbooks (delete a layer, invert the flow, data over code, ten-x, …) that Claude reads to come up with ideas that aren't the obvious one. [Browse them](skills/bold-mode/lenses/README.md).
 - **Guard hook**: active *only* during a bold run. It:
-  - counts steps and **stops the run** when the budget is used up (default 15),
+  - counts steps and **stops the run** when the budget is used up (default 25),
   - **blocks edits to your original files** (work must happen in the isolated copy),
-  - **blocks force-push, pushing to main, publishing, deploying, infra changes and dropping data**,
+  - **blocks force-push, pushing to main/master/release, publishing, deploying, infra changes and dropping data**,
   - blocks `git reset --hard`, `git clean`, `git merge` and recursive deletes inside the original.
 - **`/bold` command**: start a run in one line.
 
@@ -80,7 +80,7 @@ Small fixes, bug fixes, typos, routine refactors, anything stable. The skill say
 
 | Variable | Default | Effect |
 |---|---|---|
-| `BOLD_MODE_BUDGET` | `15` | Max counted steps (Bash / Edit / Write) per run. Reads are free. |
+| `BOLD_MODE_BUDGET` | `25` | Max counted steps (Bash / Edit / Write) per run. Reads are free. |
 | `BOLD_MODE_GUARD` | `on` | Set `off` to disable all blocking (budget and blast radius). |
 
 ## How the guard knows a run is active
