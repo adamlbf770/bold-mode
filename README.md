@@ -4,7 +4,16 @@
 
 A Claude Code plugin that lets Claude try the *bold* idea, the rewrite, the deleted layer, the "what if this didn't exist", without putting your working code at risk. Every experiment runs in an isolated copy, inside a hard step budget, and ends with an honest scoreboard against your baseline.
 
+[![tests](https://github.com/cladueusueer/bold-mode/actions/workflows/test.yml/badge.svg)](https://github.com/cladueusueer/bold-mode/actions/workflows/test.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-ffb020.svg)](#install)
+[![good first issues](https://img.shields.io/github/issues/cladueusueer/bold-mode/good%20first%20issue?label=good%20first%20issues&color=5fd38d)](https://github.com/cladueusueer/bold-mode/labels/good%20first%20issue)
+
 [עברית](README.he.md)
+
+![An illustrative bold-mode run: isolate, baseline, build, measure, report](assets/demo.svg)
+
+<sub>Illustrative example of the report format, not a measurement from a real project. See [examples/sample-report.md](examples/sample-report.md).</sub>
 
 ---
 
@@ -94,6 +103,8 @@ A run starts when the `bold-mode` skill is invoked or a prompt starts with `/bol
 - "Measured" is only as good as your tests. With no tests, the skill writes a few quick checks and says the comparison is weaker.
 
 ## Contributing
+
+New here? Pick a [good first issue](https://github.com/cladueusueer/bold-mode/labels/good%20first%20issue): most are "write one lens" (one short markdown file).
 
 The easiest contribution is a **new lens**: one short markdown file with a reframing move that has helped you find a better solution. See [CONTRIBUTING.md](CONTRIBUTING.md). Guard patterns, translations and real-world reports are welcome too.
 
