@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="428" viewBox="0 0 860 428" role="img" aria-label="Illustrative bold-mode run: isolate, baseline, build, measure, report">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="860" height="428" viewBox="0 0 860 428" role="img" aria-label="Illustrative bold-mode run: isolate, baseline, build, measure, report">
 <style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:15px;white-space:pre}
-.l{opacity:0;animation:show .01s forwards}@keyframes show{to{opacity:1}}</style>
+@keyframes show{from{opacity:0}to{opacity:1}}.l{animation:show .15s backwards}</style>
 <rect width="860" height="428" rx="12" fill="#14161c"/><rect width="860" height="36" rx="12" fill="#1e222b"/><rect y="24" width="860" height="12" fill="#1e222b"/>
 <circle cx="22" cy="18" r="6" fill="#ff5f56"/><circle cx="42" cy="18" r="6" fill="#ffbd2e"/><circle cx="62" cy="18" r="6" fill="#27c93f"/>
 <text x="310.0" y="23" fill="#8b93a7" style="font-size:13px">bold-mode · illustrative run</text>
@@ -10,7 +10,7 @@
 <text class="l" x="24" y="144" fill="#8b93a7" style="animation-delay:1.25s">lenses      change-the-unit · delete-a-layer · move-the-work</text>
 <text class="l" x="24" y="170" fill="#5fd38d" style="animation-delay:1.60s">built       Bold: stream rows straight into the CSV writer</text>
 <text class="l" x="24" y="196" fill="#c8cee0" style="animation-delay:1.95s"></text>
-<text class="l" x="24" y="222" fill="#e6e9f2" style="animation-delay:2.30s">                 Baseline     Bold      Safe (not built)</text>
+<text class="l" x="24" y="222" fill="#e6e9f2" style="animation-delay:2.30s">                Baseline     Bold      Safe (not built)</text>
 <text class="l" x="24" y="248" fill="#c8cee0" style="animation-delay:2.65s">tests passing   18/18        18/18     est. 18/18</text>
 <text class="l" x="24" y="274" fill="#c8cee0" style="animation-delay:3.00s">lines           870          190       est. ~900</text>
 <text class="l" x="24" y="300" fill="#c8cee0" style="animation-delay:3.35s">50k orders      41 s         6 s       est. ~25 s</text>
